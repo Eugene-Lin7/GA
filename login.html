@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #2C2047;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .topnav {
+            width: 100%;
+            background-color: #13072E;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            height: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .topnav a {
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .topnav img {
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #1D1033;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px; /* Adjusted to account for fixed navbar */
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            color: black;
+            font-size: 16px;
+        }
+
+        .form-group input:focus,
+        .form-group input:valid {
+            color: black;
+        }
+
+        .options {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+
+        .remember-me input {
+            margin-right: 10px;
+        }
+
+        .remember-me label {
+            font-size: 14px;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            margin-left: 20px; /* Add spacing between Remember Me and Forgot Password */
+        }
+
+        .forgot-password a {
+            color: #8A67F4;
+            text-decoration: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        .sign-up {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .sign-up a {
+            color: #8A67F4;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">
+            <img src="/images/logo.png" alt="Logo"> FINADVISOR
+        </a>
+    </div>
+    <div class="container">
+        <div class="form-title">WELCOME BACK!</div>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email*" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password*" required>
+            </div>
+            <div class="options">
+                <div class="remember-me">
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    <label for="remember_me">Remember Me</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="password_reset.html">Forgot Password?</a>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Log In <i class="fa fa-arrow-right"></i></button>
+        </form>
+        <div class="sign-up">Not with us yet? <a href="signup.html">Sign up</a></div>
+    </div>
+</body>
+
+</html>

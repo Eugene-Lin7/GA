@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Password Reset</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #2C2047;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 60px; /* Adjusted for fixed navbar */
+        }
+
+        .topnav {
+            width: 100%;
+            background-color: #13072E;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            height: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .topnav a {
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .topnav img {
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #1D1033;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="#home">
+            <img src="/images/logo.png" alt="Logo"> FINADVISOR
+        </a>
+    </div>
+    <div class="container">
+        <div class="form-title">Password Reset Success</div>
+        <img src="/images/tick.png">
+        <p>A message has been sent to your email to reset your password.</p>
+        <button class="submit-btn" onclick="window.location.href='login.html'">Back to Log In <i class="fa fa-arrow-right"></i></button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>C369 SignUp</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #2C2047;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .topnav {
+            width: 100%;
+            background-color: #13072E;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            height: 60px;
+        }
+
+        .topnav a {
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .topnav img {
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #1D1033;
+            border-radius: 10px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            color: black;
+            font-size: 16px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            color: black;
+            font-size: 16px;
+        }
+
+        .form-group input:focus,
+        .form-group input:valid {
+            color: black;
+        }
+
+        .form-group.full {
+            flex-direction: column;
+        }
+
+        .form-group.full input {
+            width: 100%;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .terms input {
+            margin-right: 10px;
+        }
+
+        .terms label {
+            font-size: 14px;
+        }
+
+        .sign-in {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .sign-in a {
+            color: #8A67F4;
+            text-decoration: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="home.html">
+            <img src="/images/logo.png" alt="Logo"> FINADVISOR
+        </a>
+    </div>
+    <div class="container">
+        <div class="form-title">SET UP YOUR ACCOUNT</div>
+        <form action="login.html" method="get">
+            <div class="form-group full">
+                <input type="password" name="name" placeholder="Legal Name (as per NRIC)*" required>
+            </div>
+            <div class="form-group full">
+                <input type="date" name="date" placeholder="Date of Birth*" required>
+            </div>
+            <div class="form-group full">
+                <select name="country" placeholder="Country Of Birth*" required>
+                    <option>Country of Birth</option>
+                    <option>Singapore</option>
+                    <option>China</option>
+                    <option>Japan</option>
+                    <option>Korean</option>
+                    <option>Malaysia</option>
+                    <option>Philippines</option>
+                </select>
+            </div>
+            <div class="form-group full">
+                <select name="nationality" placeholder="Country Of Birth*" required>
+                    <option>Singapore</option>
+                    <option>China</option>
+                    <option>Japan</option>
+                    <option>Korean</option>
+                    <option>Malaysia</option>
+                    <option>Philippines</option>
+                </select>
+            </div>
+            <div class="form-group full">
+                <input type="password" name="confirm_password" placeholder="Confirm Password*" required>
+            </div>
+            <div class="terms">
+                <input type="checkbox" name="terms" required>
+                <label for="terms">Accept Terms and Conditions</label>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up <i class="fa fa-arrow-right"></i></button>
+        </form>
+        <div class="sign-in">Already Have An Account? <a href="login.html">Log In</a></div>
+    </div>
+</body>
+
+</html>
